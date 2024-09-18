@@ -11,8 +11,11 @@ const StopLoadingIcon = memo(() => {
   };  
 
   return (  
-    <div>  
-      <button onClick={togglePreviewMode} className="mb-4 p-2 bg-blue-500 text-white rounded">  
+    <div className="flex flex-col items-center">  
+      <button   
+        onClick={togglePreviewMode}   
+        className="mb-4 p-2 bg-blue-500 text-white rounded"  
+      >  
         {isPreviewMode ? '显示图标' : '显示公式'}  
       </button>  
       {isPreviewMode ? (  
@@ -31,9 +34,9 @@ $$
         <svg  
           className={'anticon'}  
           color="currentColor"  
-          height={16}  
+          height={64} // 增加高度以便更好展示  
           viewBox="0 0 1024 1024"  
-          width={16}  
+          width={64} // 增加宽度以便更好展示  
           xmlns="http://www.w3.org/2000/svg"  
           xmlnsXlink="http://www.w3.org/1999/xlink"  
         >  
